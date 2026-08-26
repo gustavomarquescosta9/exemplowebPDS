@@ -73,4 +73,19 @@
 
 @code {
 
+    private List<Processo>? processos;
+
+    protected override void OnInitialized()
+    {
+        CarregarProcessos();
+    }
+
+    private void CarregarProcessos()
+    {
+        processos = dao.Listar();
+    }
+
+
+
+
 }
